@@ -17,11 +17,6 @@ from functools import wraps, reduce
 import logging
 import os
 
-PORT = int(os.environ.get("PORT", 8080))  # Nutze PORT von Railway oder Standard 8080
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=PORT, debug=True)
-
 app = Flask(__name__)
 app.config.update(
     MAX_TRAINS=10,
