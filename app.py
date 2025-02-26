@@ -15,18 +15,18 @@ import json
 from datetime import datetime
 from functools import wraps, reduce
 import logging
-from flask import Flask  
-import os  
+import os
+from flask import Flask
 
-app = Flask(__name__)  # Hier wird die Flask-App definiert  
-PORT = int(os.environ.get("PORT", 5050))  # Standard-Port auf 5050 setzen  
+app = Flask(__name__)
 
-@app.route("/")  
-def home():  
-    return "Server läuft!"  
+@app.route("/")
+def home():
+    return "Server läuft!"
 
-if __name__ == "__main__":  
-    app.run(host="0.0.0.0", port=PORT, debug=True)  
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))  # Standard auf 8080, falls nicht gesetzt
+    app.run(host="0.0.0.0", port=port, debug=True)
     
 app = Flask(__name__)
 app.config.update(
