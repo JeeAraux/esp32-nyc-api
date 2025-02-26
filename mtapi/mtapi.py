@@ -68,16 +68,16 @@ class Mtapi(object):
     ]
 
     def __init__(self, key=None, stations_file=None, expires_seconds=60, max_trains=10, max_minutes=30, threaded=False):
-    self._KEY = key
-    self._KEY = key
-    self._MAX_TRAINS = max_trains
-    self._MAX_MINUTES = max_minutes
-    self._EXPIRES_SECONDS = expires_seconds
-    self._THREADED = threaded
-    self._stations = {}
-    self._stops_to_stations = {}
-    self._routes = {}
-    self._read_lock = threading.RLock()
+        self._KEY = key
+        self._KEY = key
+        self._MAX_TRAINS = max_trains
+        self._MAX_MINUTES = max_minutes
+        self._EXPIRES_SECONDS = expires_seconds
+        self._THREADED = threaded
+        self._stations = {}
+        self._stops_to_stations = {}
+        self._routes = {}
+        self._read_lock = threading.RLock()
 
         # initialize the stations database
         try:
